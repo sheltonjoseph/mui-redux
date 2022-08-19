@@ -14,10 +14,9 @@ import {  update } from "../Redux/autoSlice";
 
 
 const AutoComplete = () => {
-    const inputValue = useSelector((state) => state.auto.inputValue);
-    // const[inputValue , setInputValue] = useState()
-    const [selectedData, setSelectedData] = useState();
-    console.log(inputValue)
+    const reduxValue = useSelector((state) => state.auto);
+    const inputValue = reduxValue.inputValue
+    const selectedData = reduxValue.selectedData
     const dispatch = useDispatch();
     
     const handleClick = (value) =>{
@@ -35,14 +34,14 @@ const AutoComplete = () => {
         onChange={(event, newInputValue) => {
           event.preventDefault();
           handleClick(newInputValue);
-          setSelectedData(top100Films.filter((a) => a.label === newInputValue)[0])
+          selectedData(top100Films.filter((a) => a.label === newInputValue))
         }}
       id="combo-box-demo"
       options={top100Films}
       sx={{ width: 345  }}
       renderInput={(params) => <TextField {...params} label="Movie" />}
     />
-    {selectedData &&
+    {inputValue &&
         (<Card sx={{ maxWidth: "100%" , my: 10 , height:"100%"}}>
         <CardActionArea>
           <CardMedia

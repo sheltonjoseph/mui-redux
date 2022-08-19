@@ -4,6 +4,7 @@ import  Autocomplete  from "./Components/AutoComplete";
 import CheckBox from "./pages/CheckBox";
 import Buttons from "./pages/Button"
 import Select from "./pages/Select"
+import Slider from "./pages/Slider"
 
 
 
@@ -16,7 +17,7 @@ function App() {
       <Route exact path="/checkbox" element={<CheckBox/>} />
       <Route exact path="/button" element={<Buttons/>} />
       <Route exact path="/select" element={<Select/>} />
-
+      <Route exact path="/slider" element={<Slider/>} />
     </Routes>
   </Router>
   );

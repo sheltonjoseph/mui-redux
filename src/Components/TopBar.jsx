@@ -16,12 +16,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const settings = ["Profile", "Account", "Dashboard", "Logout"];
-  const navItems = ["Autocomplete", "Buttongroup", "Checkbox" , "ActionButtons"];
   const drawerWidth = 240;
 
   const handleOpenUserMenu = (event) => {
@@ -37,18 +37,35 @@ const TopBar = () => {
   };
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+      <Link to={"/"}>
+        <Typography variant="h6" sx={{ my: 2 }}>
+          MUI
+        </Typography>
+      </Link>
+
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+        <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <Link to={"/autocomplete"}>
+              <ListItemText primary="Autocomplete" />
+            </Link>
+          </ListItemButton>
           </ListItem>
-        ))}
+          <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <Link to={"/checkbox"}>
+              <ListItemText primary="CheckBox" />
+            </Link>
+          </ListItemButton>
+          </ListItem>
+          {/* <Link>
+              <ListItemText primary="checkBox" />
+            </Link>
+            <Link>
+              <ListItemText primary="ActiveGroup" />
+            </Link> */}
+        
       </List>
     </Box>
   );

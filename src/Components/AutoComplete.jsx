@@ -1,4 +1,4 @@
-import React, { useState }from 'react'
+import React, { useEffect, useState }from 'react'
 import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -8,20 +8,33 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import TopBar from './TopBar';
+import { useSelector , useDispatch} from "react-redux";
+import {  update } from "../Redux/autoSlice";
+
 
 const AutoComplete = () => {
-    const [inputValue, setInputValue] = useState([]);
-    const [selectedData, setSelectedData] = useState({});
+    const inputValue = useSelector((state) => state.auto.inputValue);
+    // const[inputValue , setInputValue] = useState()
+    const [selectedData, setSelectedData] = useState();
     console.log(inputValue)
+    const dispatch = useDispatch();
+    
+    const handleClick = (value) =>{
+      dispatch(update({value}));
+    }
+
   return (
     <Container style={{display:'flex',justifyContent:'center'}} maxWidth="xl">
+      <TopBar/>
         {/* <Typography sx={{ p: 15 , textAlign:'center'}}>The Movies</Typography> */}
        <Box component="main" sx={{ m: 20 }}>
        <Autocomplete
-      disablePortal
+        disablePortal
         inputValue={inputValue}
-        onInputChange={(event, newInputValue) => {
-          setInputValue(newInputValue);
+        onChange={(event, newInputValue) => {
+          event.preventDefault();
+          handleClick(newInputValue);
           setSelectedData(top100Films.filter((a) => a.label === newInputValue)[0])
         }}
       id="combo-box-demo"

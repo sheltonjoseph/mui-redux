@@ -32,6 +32,9 @@ const ContinuousSlider = () => {
         <Slider aria-label="Volume" value={value} onChange={handleChange} />
         <VolumeUp />
       </Stack>
+      <Typography variant="h3" sx={{ textAlign: "center" }}>
+      Your Volume is {value}
+        </Typography>
     </Box>
     </Container>
   );

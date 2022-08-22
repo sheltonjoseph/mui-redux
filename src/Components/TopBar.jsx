@@ -80,6 +80,20 @@ const TopBar = () => {
             </Link>
           </ListItemButton>
           </ListItem>
+          <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <Link to={"/avatar"}>
+              <ListItemText primary="Avatar Tooltip" />
+            </Link>
+          </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <Link to={"/chips"}>
+              <ListItemText primary="Chips" />
+            </Link>
+          </ListItemButton>
+          </ListItem>
           {/* <Link>
               <ListItemText primary="checkBox" />
             </Link>

@@ -14,7 +14,7 @@ export const chip = createSlice({
     reducers: {
   update: (state, action) => {
     console.log(`action.payload = ${action.payload}`); // returns correct id
-    state.chipData.splice(state.chipData.findIndex((chip) => chip.key === action.payload),1) 
+    state.chipData.splice(state.chipData.findIndex((chip) => chip.key === action.payload),action.payload) 
   }
 
     }

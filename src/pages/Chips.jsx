@@ -53,7 +53,7 @@ const Chips = () => {
                 <Chip
                   icon={icon}
                   label={value.label}
-                  onDelete={() => dispatch(update(value))}
+                  onDelete={() => dispatch(update(value.key))}
                 />
               </ListItem>
             );

@@ -7,6 +7,8 @@ import Select from "./pages/Select"
 import Slider from "./pages/Slider"
 import AvatarTooltip from "./pages/AvatarTooltip"
 import Chips from "./pages/Chips"
+import Lists from "./pages/List"
+
 
 
 
@@ -23,7 +25,7 @@ function App() {
       <Route exact path="/slider" element={<Slider/>} />
       <Route exact path="/avatar" element={<AvatarTooltip/>} />
       <Route exact path="/chips" element={<Chips/>} />
-
+      <Route exact path="/list" element={<Lists/>} />
     </Routes>
   </Router>
   );

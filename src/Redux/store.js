@@ -5,6 +5,9 @@ import button from "./credSlice"
 import select from "./selectSlice"
 import slider from "./slideSlice"
 import chip from "./chipSlice"
+import list from "./listSlice"
+
+
 
 
 
@@ -16,5 +19,6 @@ export default configureStore({
     select:select,
     slider:slider,
     chip:chip,
+    list:list
   },
 });

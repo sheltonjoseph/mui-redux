@@ -6,6 +6,8 @@ import select from "./selectSlice"
 import slider from "./slideSlice"
 import chip from "./chipSlice"
 import list from "./listSlice"
+import dialog from "./dialogSlice"
+
 
 
 
@@ -19,6 +21,7 @@ export default configureStore({
     select:select,
     slider:slider,
     chip:chip,
-    list:list
+    list:list,
+    dialog:dialog
   },
 });

@@ -8,6 +8,7 @@ import Slider from "./pages/Slider"
 import AvatarTooltip from "./pages/AvatarTooltip"
 import Chips from "./pages/Chips"
 import Lists from "./pages/List"
+import Dialog from "./pages/Dialog"
 
 
 
@@ -26,6 +27,8 @@ function App() {
       <Route exact path="/avatar" element={<AvatarTooltip/>} />
       <Route exact path="/chips" element={<Chips/>} />
       <Route exact path="/list" element={<Lists/>} />
+      <Route exact path="/dialog" element={<Dialog/>} />
+
     </Routes>
   </Router>
   );

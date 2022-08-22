@@ -9,6 +9,8 @@ import AvatarTooltip from "./pages/AvatarTooltip"
 import Chips from "./pages/Chips"
 import Lists from "./pages/List"
 import Dialog from "./pages/Dialog"
+import SnackBar from "./pages/SnackBar"
+
 
 
 
@@ -28,7 +30,7 @@ function App() {
       <Route exact path="/chips" element={<Chips/>} />
       <Route exact path="/list" element={<Lists/>} />
       <Route exact path="/dialog" element={<Dialog/>} />
-
+      <Route exact path="/snackBar" element={<SnackBar/>} />
     </Routes>
   </Router>
   );

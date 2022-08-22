@@ -3,13 +3,11 @@ import { createSlice } from '@reduxjs/toolkit'
 export const slider = createSlice({
     name: 'slider',
     initialState: {
-        age:'',
+        volume:'30',
     },
     reducers: {
   update: (state, action) => {
-    console.log(state)
-    console.log(action.name)
-    state.age = action.payload
+    state.volume = action.payload.value
   }
 
     }

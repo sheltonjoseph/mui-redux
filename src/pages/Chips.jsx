@@ -15,16 +15,10 @@ const ListItem = styled("li")(({ theme }) => ({
 }));
 
 const Chips = () => {
-  const reduxChipsData = useSelector((state) => state.chip.chipData);
-  const [reduxChips, setReduxChips] = useState(reduxChipsData);
-
+  const reduxChips = useSelector((state) => state.chip.chipData);
   console.log(reduxChips);
+  const dispatch = useDispatch();
 
-  const handleDelete = (chipToDelete) => () => {
-    setReduxChips((chips) =>
-      chips.filter((chip) => chip.key !== chipToDelete.key)
-    );
-  };
 
   return (
     <Container
@@ -59,7 +53,7 @@ const Chips = () => {
                 <Chip
                   icon={icon}
                   label={value.label}
-                  onDelete={handleDelete(value)}
+                  onDelete={() => dispatch(update(value))}
                 />
               </ListItem>
             );

@@ -13,11 +13,8 @@ export const chip = createSlice({
     },
     reducers: {
   update: (state, action) => {
-    console.log(state)
-    console.log(action)
-    state.chipData = action.payload.value
-    console.log(state)
-    console.log(action)
+    console.log(`action.payload = ${action.payload}`); // returns correct id
+    state.chipData.splice(state.chipData.findIndex((chip) => chip.key === action.payload),1) 
   }
 
     }

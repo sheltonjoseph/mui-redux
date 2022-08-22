@@ -5,6 +5,9 @@ import CheckBox from "./pages/CheckBox";
 import Buttons from "./pages/Button"
 import Select from "./pages/Select"
 import Slider from "./pages/Slider"
+import AvatarTooltip from "./pages/AvatarTooltip"
+import Chips from "./pages/Chips"
+
 
 
 
@@ -18,6 +21,9 @@ function App() {
       <Route exact path="/button" element={<Buttons/>} />
       <Route exact path="/select" element={<Select/>} />
       <Route exact path="/slider" element={<Slider/>} />
+      <Route exact path="/avatar" element={<AvatarTooltip/>} />
+      <Route exact path="/chips" element={<Chips/>} />
+
     </Routes>
   </Router>
   );

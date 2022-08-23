@@ -11,12 +11,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { update } from "../Redux/slideSlice";
 
 const ContinuousSlider = () => {
-  // const [value, setValue] = useState(30);
+ 
   const reduxVolume = useSelector((state) => state.slider.volume);
   console.log(reduxVolume);
   const dispatch = useDispatch();
-  const handleChange = (value) => {
-    dispatch(update({ value }));
+  const handleChange = (reduxVolume) => {
+    dispatch(update( {reduxVolume }));
   };
 
   return (

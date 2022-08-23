@@ -11,6 +11,8 @@ import Lists from "./pages/List"
 import Dialog from "./pages/Dialog"
 import SnackBar from "./pages/SnackBar"
 import Tabs from "./pages/Tabs"
+import Drawer from "./pages/Drawer"
+
 
 
 
@@ -34,6 +36,8 @@ function App() {
       <Route exact path="/dialog" element={<Dialog/>} />
       <Route exact path="/snackBar" element={<SnackBar/>} />
       <Route exact path="/tabs" element={<Tabs/>} />
+      <Route exact path="/drawer" element={<Drawer/>} />
+
 
     </Routes>
   </Router>

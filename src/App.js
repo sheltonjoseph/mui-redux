@@ -10,6 +10,8 @@ import Chips from "./pages/Chips"
 import Lists from "./pages/List"
 import Dialog from "./pages/Dialog"
 import SnackBar from "./pages/SnackBar"
+import Tabs from "./pages/Tabs"
+
 
 
 
@@ -31,6 +33,8 @@ function App() {
       <Route exact path="/list" element={<Lists/>} />
       <Route exact path="/dialog" element={<Dialog/>} />
       <Route exact path="/snackBar" element={<SnackBar/>} />
+      <Route exact path="/tabs" element={<Tabs/>} />
+
     </Routes>
   </Router>
   );

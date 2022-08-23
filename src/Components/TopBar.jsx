@@ -122,6 +122,13 @@ const TopBar = () => {
             </Link>
           </ListItemButton>
           </ListItem>
+          <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <Link to={"/drawer"}>
+              <ListItemText primary="Drawer" />
+            </Link>
+          </ListItemButton>
+          </ListItem>
           {/* <Link>
               <ListItemText primary="checkBox" />
             </Link>
